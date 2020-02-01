@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Pet } from '@nx05/core-data';``
+import { Pet } from '@nx05/core-data';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +23,8 @@ export class PetsService {
     return this.httpClient.patch(this.URL + '/' + pet.id, pet)
   }
 
+  deletePet(id: string) {
+    return this.httpClient.delete(this.URL + '/' + id)
+  }
 
 }

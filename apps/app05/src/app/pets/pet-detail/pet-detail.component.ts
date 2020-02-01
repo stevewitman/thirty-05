@@ -16,6 +16,7 @@ export class PetDetailComponent implements OnInit {
     this.currentPet = Object.assign({}, value);
   };
   @Output() saving = new EventEmitter();
+  @Output() cancelling = new EventEmitter();
 
   constructor() { }
 
@@ -24,6 +25,10 @@ export class PetDetailComponent implements OnInit {
 
   onSubmit() {
     this.saving.emit(this.form.value);
+  }
+
+  onClear() {
+    this.cancelling.emit(this.currentPet);
   }
 
 }

@@ -36,8 +36,8 @@ export class PetsComponent implements OnInit {
   private initForm() {
     this.form = this.fb.group({
       id: null,
-      title: [''],
-      details: ['']
+      title: ['', Validators.compose([Validators.required])],
+      details: ['', Validators.compose([Validators.required])]
     })
   }
 
@@ -55,12 +55,25 @@ export class PetsComponent implements OnInit {
         this.getPets();
       });
   }
-  
+
   updatePet(pet) {
     this.petsService.updatePet(pet)
       .subscribe(result => {
         this.getPets();
       });
+  }
+
+  cancel () {
+    this.resetPet();
+  }
+
+  resetPet() {
+    const emptyPet: Pet = {
+      id: null,
+      title: '',
+      details: ''
+    }
+    this.selectPet(emptyPet);
   }
 
 }
