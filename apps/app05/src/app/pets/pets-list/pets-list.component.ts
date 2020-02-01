@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { Pet } from '@nx05/core-data';
 
 @Component({
@@ -6,13 +6,9 @@ import { Pet } from '@nx05/core-data';
   templateUrl: './pets-list.component.html',
   styleUrls: ['./pets-list.component.scss']
 })
-export class PetsListComponent implements OnInit {
+export class PetsListComponent {
 
   @Input() pets: Pet[];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Output() selecting = new EventEmitter();
 
 }

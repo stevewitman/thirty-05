@@ -3,11 +3,14 @@
     <mat-card-title>Pets List</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <ul>
-      <li *ngFor="let pet of pets">
+    <mat-list>
+      <mat-list-item
+      *ngFor="let pet of pets"
+      (click)="selecting.emit(pet)"
+      style="cursor: pointer">
         <h4 mat-line>{{ pet.title }}</h4>
         <p mat-line>{{ pet.details }}</p>
-      </li>
-    </ul>
+      </mat-list-item>
+    </mat-list>
   </mat-card-content>
 </mat-card>
