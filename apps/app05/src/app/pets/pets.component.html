@@ -3,6 +3,7 @@
     <nx05-pets-list
     [pets]="pets$ | async"
     (selecting)=selectPet($event)
+    (deleting)=deletePet($event)
   ></nx05-pets-list>
   </div>
   <div class="column">

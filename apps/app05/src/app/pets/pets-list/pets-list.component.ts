@@ -9,6 +9,9 @@ import { Pet } from '@nx05/core-data';
 export class PetsListComponent {
 
   @Input() pets: Pet[];
+  @Input() readonly = false;
+
   @Output() selecting = new EventEmitter();
+  @Output() deleting = new EventEmitter();
 
 }

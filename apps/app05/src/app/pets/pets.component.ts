@@ -76,4 +76,8 @@ export class PetsComponent implements OnInit {
     this.selectPet(emptyPet);
   }
 
+  deletePet(pet) {
+    this.petsService.deletePet(pet.id)
+      .subscribe(result => this.getPets());
+  }
 }
