@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { MaterialModule } from '@nx05/material';
 import { AppComponent } from './app.component';
@@ -11,8 +11,6 @@ import { UiLoginModule } from '@nx05/ui-login';
 import { PetsComponent } from './pets/pets.component';
 import { PetsListComponent } from './pets/pets-list/pets-list.component';
 import { PetDetailComponent } from './pets/pet-detail/pet-detail.component';
-
-
 
 @NgModule({
   declarations: [
@@ -26,6 +24,7 @@ import { PetDetailComponent } from './pets/pet-detail/pet-detail.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     MaterialModule,
     ReactiveFormsModule,
     UiLoginModule

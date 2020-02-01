@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Pet } from '@nx05/core-data';
 
 @Component({
   selector: 'nx05-pets-list',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pets-list.component.scss']
 })
 export class PetsListComponent implements OnInit {
+
+  @Input() pets: Pet[];
 
   constructor() { }
 

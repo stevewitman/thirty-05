@@ -3,6 +3,11 @@
     <mat-card-title>Pets List</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    list view here
+    <ul>
+      <li *ngFor="let pet of pets">
+        <h4 mat-line>{{ pet.title }}</h4>
+        <p mat-line>{{ pet.details }}</p>
+      </li>
+    </ul>
   </mat-card-content>
 </mat-card>

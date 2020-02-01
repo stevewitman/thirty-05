@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@nx05/material": ["libs/material/src/index.ts"],
-      "@nx05/ui-login": ["libs/ui-login/src/index.ts"]
+      "@nx05/ui-login": ["libs/ui-login/src/index.ts"],
+      "@nx05/core-data": ["libs/core-data/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

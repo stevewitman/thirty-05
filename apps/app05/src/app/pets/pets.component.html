@@ -1,6 +1,6 @@
 <div class="row">
   <div class="column">
-    <nx05-pets-list></nx05-pets-list>
+    <nx05-pets-list [pets]="pets$ | async"></nx05-pets-list>
   </div>
   <div class="column">
     <nx05-pet-detail></nx05-pet-detail>
