@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UiLoginModule } from '@nx05/ui-login';
 import { PetsComponent } from './pets/pets.component';
+import { PetsListComponent } from './pets/pets-list/pets-list.component';
+import { PetDetailComponent } from './pets/pet-detail/pet-detail.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PetsComponent
+    PetsComponent,
+    PetsListComponent,
+    PetDetailComponent
   ],
   imports: [
     AppRoutingModule,
