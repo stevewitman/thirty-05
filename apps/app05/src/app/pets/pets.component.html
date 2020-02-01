@@ -8,7 +8,8 @@
   <div class="column">
     <nx05-pet-detail
     [pet]="selectedPet"
-    [form]="form">
+    [form]="form"
+    (saving)="savePet($event)">
     </nx05-pet-detail>
   </div>
 </div>

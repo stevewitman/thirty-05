@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
@@ -15,6 +15,7 @@ export class PetDetailComponent implements OnInit {
     if (value) this.originalTitle = value.title;
     this.currentPet = Object.assign({}, value);
   };
+  @Output() saving = new EventEmitter();
 
   constructor() { }
 
@@ -22,7 +23,7 @@ export class PetDetailComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("Save clicked")
+    this.saving.emit(this.form.value);
   }
 
 }

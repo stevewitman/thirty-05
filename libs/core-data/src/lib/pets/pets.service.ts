@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { Pet } from '@nx05/core-data';``
 
 @Injectable({
   providedIn: 'root'
@@ -13,5 +14,14 @@ export class PetsService {
   getPets() {
     return this.httpClient.get(this.URL);
   }
+
+  createPet(pet: Pet) {
+    return this.httpClient.post(this.URL, pet);
+  }
+
+  updatePet(pet: Pet) {
+    return this.httpClient.patch(this.URL + '/' + pet.id, pet)
+  }
+
 
 }

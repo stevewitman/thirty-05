@@ -41,4 +41,26 @@ export class PetsComponent implements OnInit {
     })
   }
 
+  savePet(pet: Pet) {
+    if (!pet.id) {
+      this.createPet(pet);
+    } else {
+      this.updatePet(pet);
+    }
+  }
+
+  createPet(pet) {
+    this.petsService.createPet(pet)
+      .subscribe(result => {
+        this.getPets();
+      });
+  }
+  
+  updatePet(pet) {
+    this.petsService.updatePet(pet)
+      .subscribe(result => {
+        this.getPets();
+      });
+  }
+
 }
