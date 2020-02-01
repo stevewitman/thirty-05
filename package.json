@@ -6,7 +6,7 @@
     "ng": "ng",
     "nx": "nx",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build",    "deploy": "ng build --prod && cp ./dist/apps/app05/index.html ./dist/apps/app05/200.html && surge ./dist/apps/app05/ https://sw30-app05.surge.sh",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
