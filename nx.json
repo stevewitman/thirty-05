@@ -1,0 +1,22 @@
+{
+  "npmScope": "nx05",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "app05": {
+      "tags": []
+    },
+    "app05-e2e": {
+      "tags": [],
+      "implicitDependencies": ["app05"]
+    }
+  }
+}
