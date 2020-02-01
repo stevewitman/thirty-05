@@ -11,13 +11,15 @@ import { UiLoginModule } from '@nx05/ui-login';
 import { PetsComponent } from './pets/pets.component';
 import { PetsListComponent } from './pets/pets-list/pets-list.component';
 import { PetDetailComponent } from './pets/pet-detail/pet-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PetsComponent,
     PetsListComponent,
-    PetDetailComponent
+    PetDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     AppRoutingModule,
